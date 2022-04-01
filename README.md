@@ -23,8 +23,6 @@ I made Klavyl as a personal modification of the excellent [Redox keyboard](https
 
 **Note:** Klavyl works but is still a work in progress.
 
-The Klavgen generator is still messy and not published. Once I do this (soon), I'll also publish the Klavyl keyboard configuration so that you can easily modify the layout.
-
 The current files are meant for:
 
 * Kailh hotswap sockets
@@ -55,6 +53,10 @@ Back of 3D model, showing the cutouts for the Pro Micro and TRRS jack as well as
 <p align="center">
 <img src="img/stl/full_back.png" alt="Composed back" width="700"/>
 </p>
+
+# Generating STLs and adjust the layout
+
+To see how Klavyl is built and adjust it, as well as re-generate the output `.stl` files (from the `stl` directory), check out and run the `klavyl.py` file. It's still quite messy.
 
 # Purchased parts
 
@@ -104,7 +106,7 @@ This is what you should print:
 |        1 | `palm rest.stl`                               | Print **mirrored** for right hand                                                  |
 |       62 | `switch holder.stl`                           | Print file as is, without supports, with the flat side facing down. Use ABS        |
 |        4 | `connector.stl`                               | Print file as is, without supports                                                 |
-|        2 | `pro micro holder.stl`                        | Ensure your Pro Micros actually fit                                                |
+|        2 | `controller holder.stl`                       | Ensure your Pro Micros actually fit                                                |
 |        2 | `trrs jack holder.stl`                        | Ensure your TRRS jacks actually fit                                                |
 
 ## Keyboard bottom
