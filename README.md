@@ -62,7 +62,7 @@ Back of 3D model, showing the cutouts for the Pro Micro and TRRS jack as well as
 # Generating STLs and adjust the layout
 
 To see how Klavyl is built and adjust it, as well as re-generate the output `.stl` files (from the `stl` directory),
-check out and run the `klavyl.py` file. It's still quite messy.
+check out and run the [`klavyl.py`](klavyl.py) file. It's still quite messy.
 
 # Purchased parts
 
@@ -120,69 +120,71 @@ This is what you should print:
 
 ## Keyboard bottom
 
-File `keyboard bottom.stl`. The bottom part, for the left hand.
+File [`keyboard_bottom.stl`](stl/keyboard_bottom.stl). The bottom part, for the left hand.
 
 <p align="center">
-<img src="img/stl/components/bottom.png" alt="Bottom" width="700"/>
+<img src="img/stl/components/bottom.png" alt="Bottom" width="500"/>
 </p>
 
 ## Keyboard top
 
-File `keyboard top.stl`. The top plate, for the left hand. It is flat with simple holes so you can also cut it on a
-laser cutter or a CNC machine.
+File [`keyboard_top.stl`](stl/keyboard_top.stl). The top plate, for the left hand. It is flat with simple holes so that
+it can be made with a laser cutter or a CNC machine
 
 <p align="center">
-<img src="img/stl/components/top.png" alt="Top" width="700"/>
+<img src="img/stl/components/top.png" alt="Top" width="500"/>
 </p>
 
 ## Palm rest
 
-File `palm rest.stl`. The palm rests which attach to the bottom via connectors.
+File [`palm_rest.stl`](stl/palm_rest.stl). The palm rest which attaches to the bottom via connectors. It can also be
+fused with the bottom, see below.
 
 <p align="center">
-<img src="img/stl/components/palm_rest.png" alt="Palm rest back" width="700"/>
+<img src="img/stl/components/palm_rest.png" alt="Palm rest" width="500"/>
 </p>
 
-## Switch holders
+## Switch holder
 
-File `switch holder.stl`. Holds the Kailh hotswap socket and allows you to solder the diode, column and row wires
-in-place.
+File [`switch_holder.stl`](stl/switch_holder.stl). Holds the Kailh hotswap socket and allows you to solder the diode,
+column and row wires in-place. Print it the way it's oriented in the STL, with the flat side (that has a small hole) on
+the printing plate.
 
 **Note**: print switch holders in ABS since you'll be soldering on them.
 
 <p align="center">
-<img src="img/stl/components/switch_holder.png" alt="Switch holder" width="500"/>
+<img src="img/stl/components/switch_holder.png" alt="Switch holder" width="400"/>
 </p>
 
 This is what the switch holder looks like when "positioned" into a single-key keyboard:
 
 <p align="center">
-<img src="img/stl/switch_holder_in_place_top.png" alt="Switch holder in position, from top" width="350"/>
-<img src="img/stl/switch_holder_in_place_bottom.png" alt="Switch holder in position, from bottom" width="350"/>
+<img src="img/stl/switch_holder_in_place_top.png" alt="Switch holder in position, from top" width="250"/>
+<img src="img/stl/switch_holder_in_place_bottom.png" alt="Switch holder in position, from bottom" width="295"/>
 </p>
 
-## Pro Micro holders
+## Pro Micro controller holder
 
-File `pro micro holder.stl`. Holds the Arduino Pro Micro controller.
+File [`controller_holder.stl`](stl/controller_holder.stl). Holds the Arduino Pro Micro controller.
 
 <p align="center">
-<img src="img/stl/components/pro_micro_holder.png" alt="Pro Micro holder" width="600"/>
+<img src="img/stl/components/pro_micro_holder.png" alt="Pro Micro holder" width="300"/>
 </p>
 
 ## TRRS jack holder
 
-File `trrs jack holder.stl`. Holds the TRRS jack.
+File [`trrs_jack_holder.stl`](stl/trrs_jack_holder.stl). Holds the TRRS jack.
 
 <p align="center">
-<img src="img/stl/components/trrs_jack_holder.png" alt="TRRS jack holder" width="300"/>
+<img src="img/stl/components/trrs_jack_holder.png" alt="TRRS jack holder" width="250"/>
 </p>
 
 ## Connector
 
-File `connector.stl`. Connects the bottom to the palm rest.
+File [`connector.stl`](stl/connector.stl). Connects the bottom to the palm rest.
 
 <p align="center">
-<img src="img/stl/components/connector.png" alt="Connector" width="200"/>
+<img src="img/stl/components/connector.png" alt="Connector" width="150"/>
 </p>
 
 # Building
