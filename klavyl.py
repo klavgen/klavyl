@@ -3,14 +3,14 @@ from dataclasses import dataclass
 
 config = Config(
     case_config=CaseConfig(side_fillet=4, palm_rests_top_fillet=3),
-    key_config=KeyConfig(case_tile_margin=7.5),
+    key_config=MXKeyConfig(case_tile_margin=7.5),
     controller_config=ControllerConfig(case_tile_margin=5),
     trrs_jack_config=TrrsJackConfig(case_tile_margin=5),
 )
 
-size_1u = 18
-size_15u = 23
-key_gap = 1.05
+keycap_width_1_5u = 23
+key_x_gap = MX_KEY_X_SPACING - MX_KEYCAP_1U_WIDTH
+key_y_gap = MX_KEY_Y_SPACING - MX_KEYCAP_1U_WIDTH
 
 
 @dataclass
@@ -22,13 +22,13 @@ class Col:
 
 
 cols = [
-    Col(size_15u, -1, 4),
-    Col(size_1u, -3, 4),
-    Col(size_1u, 4.5, 4, horz_offset=3),
-    Col(size_1u, 8, 4, horz_offset=1),
-    Col(size_1u, 3.5, 4),
-    Col(size_1u, 2, 4),
-    Col(size_1u, -3, 4),
+    Col(MX_KEYCAP_1_5U_WIDTH, -1, 4),
+    Col(MX_KEYCAP_1U_WIDTH, -3, 4),
+    Col(MX_KEYCAP_1U_WIDTH, 4.5, 4, horz_offset=3),
+    Col(MX_KEYCAP_1U_WIDTH, 8, 4, horz_offset=1),
+    Col(MX_KEYCAP_1U_WIDTH, 3.5, 4),
+    Col(MX_KEYCAP_1U_WIDTH, 2, 4),
+    Col(MX_KEYCAP_1U_WIDTH, -3, 4),
 ]
 
 keys = []
@@ -38,16 +38,16 @@ for col in cols:
     y = 0 + col.vert_offset
     x += col.horz_size / 2 + col.horz_offset
     for row_index in range(col.num_rows):
-        y -= size_1u / 2
-        keys.append(Key(x=x, y=y, keycap_width=col.horz_size, keycap_depth=size_1u))
-        y -= size_1u / 2 + key_gap
-    x += col.horz_size / 2 + key_gap
+        y -= MX_KEYCAP_1U_WIDTH / 2
+        keys.append(Key(x=x, y=y, keycap_width=col.horz_size, keycap_depth=MX_KEYCAP_1U_WIDTH))
+        y -= MX_KEYCAP_1U_WIDTH / 2 + key_y_gap
+    x += col.horz_size / 2 + key_x_gap
 
 # Thumb cluster
 cluster_x = 108
 cluster_y = -86
 
-keys.append(Key(x=cluster_x, y=cluster_y, rotate=-25, keycap_width=23, keycap_depth=18))
+keys.append(Key(x=cluster_x, y=cluster_y, rotate=-25, keycap_width=MX_KEYCAP_1_5U_WIDTH))
 
 second_offset_x = 20
 second_offset_y = -12.5
@@ -59,16 +59,14 @@ keys.extend(
             x=cluster_second_x,
             y=cluster_second_y,
             rotate=-40,
-            keycap_width=18,
-            keycap_depth=23,
+            keycap_depth=MX_KEYCAP_1_5U_WIDTH,
         ),
         Key(
-            x=cluster_second_x + size_1u + key_gap,
+            x=cluster_second_x + MX_KEYCAP_1U_WIDTH + key_x_gap,
             y=cluster_second_y,
             rotate=-40,
             rotate_around=(cluster_second_x, cluster_second_y),
-            keycap_width=18,
-            keycap_depth=23,
+            keycap_depth=MX_KEYCAP_1_5U_WIDTH,
         ),
     ]
 )
