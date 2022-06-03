@@ -46,23 +46,29 @@ Back photo, showing the low height of 11 mm and the cable connections:
 <img src="img/keyboard_back.jpg" alt="Klavyl keyboard" width="700"/>
 </p>
 
+Front of 3D model, showing the top with switch holes, the bottom and the palm rest:
+
+<p align="center">
+<img src="img/stl/front.png" alt="Front" width="700"/>
+</p>
+
+Back of 3D model, showing the cutouts for the Pro Micro and TRRS jack:
+
+<p align="center">
+<img src="img/stl/back.png" alt="Back" width="700"/>
+</p>
+
 Front of 3D model, showing all the components (top, bottom, palm rest, switch holders, Pro Micro holder, TRRS jack
 holder):
 
 <p align="center">
-<img src="img/stl/full_front.png" alt="Composed front" width="700"/>
+<img src="img/stl/front_with_all_components.png" alt="Front with all components" width="700"/>
 </p>
 
-Back of 3D model, showing the cutouts for the Pro Micro and TRRS jack as well as all the components:
-
-<p align="center">
-<img src="img/stl/full_back.png" alt="Composed back" width="700"/>
-</p>
-
-# Generating STLs and adjust the layout
+# Generating STLs and adjusting the layout
 
 To see how Klavyl is built and adjust it, as well as re-generate the output `.stl` files (from the `stl` directory),
-check out and run the [`klavyl.py`](klavyl.py) file. It's still quite messy.
+check out and run the [`klavyl.py`](klavyl.py) file.
 
 # Purchased parts
 
@@ -144,23 +150,16 @@ fused with the bottom, see below.
 <img src="img/stl/components/palm_rest.png" alt="Palm rest" width="500"/>
 </p>
 
-## Switch holder
+## MX switch holder
 
-File [`switch_holder.stl`](stl/switch_holder.stl). Holds the Kailh hotswap socket and allows you to solder the diode,
+File [`switch_holder.stl`](stl/switch_holder.stl). Holds the Kailh MX hotswap socket and allows you to solder the diode,
 column and row wires in-place. Print it the way it's oriented in the STL, with the flat side (that has a small hole) on
 the printing plate.
 
 **Note**: print switch holders in ABS since you'll be soldering on them.
 
 <p align="center">
-<img src="img/stl/components/switch_holder.png" alt="Switch holder" width="400"/>
-</p>
-
-This is what the switch holder looks like when "positioned" into a single-key keyboard:
-
-<p align="center">
-<img src="img/stl/switch_holder_in_place_top.png" alt="Switch holder in position, from top" width="250"/>
-<img src="img/stl/switch_holder_in_place_bottom.png" alt="Switch holder in position, from bottom" width="295"/>
+<img src="img/stl/components/switch_holder_mx.png" alt="Switch holder" width="400"/>
 </p>
 
 ## Pro Micro controller holder
@@ -168,7 +167,7 @@ This is what the switch holder looks like when "positioned" into a single-key ke
 File [`controller_holder.stl`](stl/controller_holder.stl). Holds the Arduino Pro Micro controller.
 
 <p align="center">
-<img src="img/stl/components/pro_micro_holder.png" alt="Pro Micro holder" width="300"/>
+<img src="img/stl/components/controller_holder.png" alt="Pro Micro holder" width="300"/>
 </p>
 
 ## TRRS jack holder
