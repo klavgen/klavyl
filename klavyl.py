@@ -8,7 +8,6 @@ config = Config(
     trrs_jack_config=TrrsJackConfig(case_tile_margin=5),
 )
 
-keycap_width_1_5u = 23
 key_x_gap = MX_KEY_X_SPACING - MX_KEYCAP_1U_WIDTH
 key_y_gap = MX_KEY_Y_SPACING - MX_KEYCAP_1U_WIDTH
 
