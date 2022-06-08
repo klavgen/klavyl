@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 config = Config(
     case_config=CaseConfig(side_fillet=4, palm_rests_top_fillet=3),
-    key_config=MXKeyConfig(case_tile_margin=7.5),
+    mx_key_config=MXKeyConfig(case_tile_margin=7.5),
     controller_config=ControllerConfig(case_tile_margin=5),
     trrs_jack_config=TrrsJackConfig(case_tile_margin=5),
 )

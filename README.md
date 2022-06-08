@@ -1,4 +1,4 @@
-# Klavyl handwired mechanical keyboard
+# Klavyl: handwired mechanical keyboard
 
 <p align="center">
 <img src="img/keyboard.jpg" alt="Klavyl keyboard" width="700"/>
