@@ -9,7 +9,8 @@
 is low height, and has a palm rest. That's a lot, so let's decompose:
 
 - **handwired**: you don't need to buy or make PCBs
-- **hotswappable**: uses MX switches with Kailh hotswap sockets
+- **MX or Choc switches**: uses either MX or Choc switches (but with MX spacing)
+- **hotswappable**: uses Kailh hotswap sockets
 - **split**: left and right hand halves are separate
 - **ortholinear**: keys form a line across rows, rather than staggered where each row is offset
 - **3D-printed without supports** on a home FDM printer, with large parts kept simple to minimize the chance of errors
@@ -25,11 +26,9 @@ is low height, and has a palm rest. That's a lot, so let's decompose:
 
 I made Klavyl as a personal modification of the excellent [Redox keyboard](https://github.com/mattdibi/redox-keyboard).
 
-**Note:** Klavyl works but is still a work in progress.
-
 The current files are meant for:
 
-- Kailh hotswap sockets
+- Kailh hotswap sockets (MX or Choc)
 - Pro Micro or similar boards of the same size
 - TRRS connection between the two halves
 - QMK for the firmware
@@ -38,7 +37,14 @@ The current files are meant for:
 
 If you want a different config, let me know by filing an issue.
 
-# More pictures
+# STLs
+
+You can find STLs in:
+
+- [`/stl_mx`](stl_mx/) for MX switches
+- [`/stl_choc`](stl_choc/) for Choc switches
+
+# More pictures of the MX version
 
 Back photo, showing the low height of 11 mm and the cable connections:
 
@@ -70,6 +76,8 @@ holder):
 To see how Klavyl is built and adjust it, as well as re-generate the output `.stl` files (from the `stl` directory),
 check out and run the [`klavyl.py`](klavyl.py) file.
 
+Modify the `use_choc` variable to generate Choc holes and switch holders.
+
 # Purchased parts
 
 These are the parts you need. The Amazon links is what I used and they are non-affiliate.
@@ -78,7 +86,7 @@ These are the parts you need. The Amazon links is what I used and they are non-a
 | -------: | ------------------------------------- | ------------------------------------------------------------------------ |
 |       62 | MX switches                           | I use Boba U4, from AliExpress                                           |
 |       62 | MX keycaps                            | 48 1u keycaps and 14 1.25u keycaps                                       |
-|       62 | Kailh hotswap sockets                 | [Amazon link](https://www.amazon.com/gp/product/B096WZ6TJ5)              |
+|       62 | Kailh hotswap sockets                 | [Amazon link](https://www.amazon.com/gp/product/B096WZ6TJ5) for MX       |
 |       62 | 1N4148 diodes                         | [Amazon link](https://www.amazon.com/gp/product/B06XB1R2NK)              |
 |        2 | PJ-320A 4-pole 3.5 mm TRRS connectors | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)              |
 |        2 | 4.7 kOhm resistors                    | [Amazon link](https://www.amazon.com/gp/product/B07HDFHPP3)              |
@@ -103,8 +111,11 @@ You need:
 
 # 3D printed parts
 
-All the parts for 3D printing are in the `stl` directory. They have been tested on an Ender 3 V2 and therefore the
-tolerances may not work for your printer. If that's the case, let me know by filing an issue in the project.
+All the parts for 3D printing are in the `stl_mx`/`stl_choc` directories. They have been tested on an Ender 3 V2 and
+therefore the tolerances may not work for your printer. If that's the case, let me know by filing an issue in the
+project.
+
+Below I discuss MX version, but everything is the same for the Choc versions in the `stl_choc` directory.
 
 You should be able to print everything in PLA, expect the switch holders for which I recommend ABS because you'll be
 soldering on them and the soldering iron can very easily melt PLA.
@@ -126,7 +137,7 @@ This is what you should print:
 
 ## Keyboard bottom
 
-File [`keyboard_bottom.stl`](stl/keyboard_bottom.stl). The bottom part, for the left hand.
+File [`keyboard_bottom.stl`](stl_mx/keyboard_bottom.stl). The bottom part, for the left hand.
 
 <p align="center">
 <img src="img/stl/components/bottom.png" alt="Bottom" width="500"/>
@@ -134,8 +145,8 @@ File [`keyboard_bottom.stl`](stl/keyboard_bottom.stl). The bottom part, for the 
 
 ## Keyboard top
 
-File [`keyboard_top.stl`](stl/keyboard_top.stl). The top plate, for the left hand. It is flat with simple holes so that
-it can be made with a laser cutter or a CNC machine
+File [`keyboard_top.stl`](stl_mx/keyboard_top.stl). The top plate, for the left hand. It is flat with simple holes so
+that it can be made with a laser cutter or a CNC machine
 
 <p align="center">
 <img src="img/stl/components/top.png" alt="Top" width="500"/>
@@ -143,18 +154,18 @@ it can be made with a laser cutter or a CNC machine
 
 ## Palm rest
 
-File [`palm_rest.stl`](stl/palm_rest.stl). The palm rest which attaches to the bottom via connectors. It can also be
+File [`palm_rest.stl`](stl_mx/palm_rest.stl). The palm rest which attaches to the bottom via connectors. It can also be
 fused with the bottom, see below.
 
 <p align="center">
 <img src="img/stl/components/palm_rest.png" alt="Palm rest" width="500"/>
 </p>
 
-## MX switch holder
+## Switch holder
 
-File [`switch_holder.stl`](stl/switch_holder.stl). Holds the Kailh MX hotswap socket and allows you to solder the diode,
-column and row wires in-place. Print it the way it's oriented in the STL, with the flat side (that has a small hole) on
-the printing plate.
+File [`switch_holder.stl`](stl_mx/switch_holder.stl). Holds the Kailh MX hotswap socket and allows you to solder the
+diode, column and row wires in-place. Print it the way it's oriented in the STL, with the flat side (that has a small
+hole) on the printing plate.
 
 **Note**: print switch holders in ABS since you'll be soldering on them.
 
@@ -164,7 +175,7 @@ the printing plate.
 
 ## Pro Micro controller holder
 
-File [`controller_holder.stl`](stl/controller_holder.stl). Holds the Arduino Pro Micro controller.
+File [`controller_holder.stl`](stl_mx/controller_holder.stl). Holds the Arduino Pro Micro controller.
 
 <p align="center">
 <img src="img/stl/components/controller_holder.png" alt="Pro Micro holder" width="300"/>
@@ -172,7 +183,7 @@ File [`controller_holder.stl`](stl/controller_holder.stl). Holds the Arduino Pro
 
 ## TRRS jack holder
 
-File [`trrs_jack_holder.stl`](stl/trrs_jack_holder.stl). Holds the TRRS jack.
+File [`trrs_jack_holder.stl`](stl_mx/trrs_jack_holder.stl). Holds the TRRS jack.
 
 <p align="center">
 <img src="img/stl/components/trrs_jack_holder.png" alt="TRRS jack holder" width="250"/>
@@ -180,7 +191,7 @@ File [`trrs_jack_holder.stl`](stl/trrs_jack_holder.stl). Holds the TRRS jack.
 
 ## Connector
 
-File [`connector.stl`](stl/connector.stl). Connects the bottom to the palm rest.
+File [`connector.stl`](stl_mx/connector.stl). Connects the bottom to the palm rest.
 
 <p align="center">
 <img src="img/stl/components/connector.png" alt="Connector" width="150"/>
