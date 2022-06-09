@@ -82,23 +82,23 @@ Modify the `use_choc` variable to generate Choc holes and switch holders.
 
 These are the parts you need. The Amazon links is what I used and they are non-affiliate.
 
-| Quantity | Part                                  | Notes                                                                    |
-| -------: | ------------------------------------- | ------------------------------------------------------------------------ |
-|       62 | MX switches                           | I use Boba U4, from AliExpress                                           |
-|       62 | MX keycaps                            | 48 1u keycaps and 14 1.25u keycaps                                       |
-|       62 | Kailh hotswap sockets                 | [Amazon link](https://www.amazon.com/gp/product/B096WZ6TJ5) for MX       |
-|       62 | 1N4148 diodes                         | [Amazon link](https://www.amazon.com/gp/product/B06XB1R2NK)              |
-|        2 | PJ-320A 4-pole 3.5 mm TRRS connectors | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)              |
-|        2 | 4.7 kOhm resistors                    | [Amazon link](https://www.amazon.com/gp/product/B07HDFHPP3)              |
-|        2 | Arduino Pro Micro microcontrollers    | [Amazon link](https://www.amazon.com/gp/product/B08BJNV1J3)              |
-|        1 | TRRS cable                            | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)              |
-|        1 | Micro USB cable                       | Make sure it's not a power-only cable                                    |
-|  20 feet | 26 gauge or smaller solid core wire   | You can also use enameled or stranded wires, but it will be more painful |
-|      ~20 | Rubber bumpers to stabilize the board | [Amazon link](https://www.amazon.com/gp/product/B08MDW52SC)              |
-|       12 | M3 6 or 8 mm screws                   | [Amazon link](https://www.amazon.com/gp/product/B07VRC5RJ8)              |
-|       12 | M3 inserts                            | [Amazon link](https://www.amazon.com/gp/product/B01IYWTCWW)              |
-|     Much | PLA for 3D printing most parts        | I used a mix of Hatchbox and Overture, but any should do                 |
-|     Some | ABS for 3D printing switch holders    | I used Hatchbox                                                          |
+| Quantity | Part                                  | Notes                                                                                                              |
+| -------: | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+|       62 | MX switches                           | I use Boba U4, from AliExpress                                                                                     |
+|       62 | MX keycaps                            | 48 1u keycaps and 14 1.25u keycaps                                                                                 |
+|       62 | Kailh hotswap sockets                 | [Amazon link](https://www.amazon.com/gp/product/B096WZ6TJ5) for MX; the Choc hotswap sockets I got from AliExpress |
+|       62 | 1N4148 diodes                         | [Amazon link](https://www.amazon.com/gp/product/B06XB1R2NK)                                                        |
+|        2 | PJ-320A 4-pole 3.5 mm TRRS connectors | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)                                                        |
+|        2 | 4.7 kOhm resistors                    | [Amazon link](https://www.amazon.com/gp/product/B07HDFHPP3)                                                        |
+|        2 | Arduino Pro Micro microcontrollers    | [Amazon link](https://www.amazon.com/gp/product/B08BJNV1J3)                                                        |
+|        1 | TRRS cable                            | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)                                                        |
+|        1 | Micro USB cable                       | Make sure it's not a power-only cable                                                                              |
+|  20 feet | 26 gauge or smaller solid core wire   | You can also use enameled or stranded wires, but it will be more painful                                           |
+|      ~20 | Rubber bumpers to stabilize the board | [Amazon link](https://www.amazon.com/gp/product/B08MDW52SC)                                                        |
+|       12 | M3 6 or 8 mm screws                   | [Amazon link](https://www.amazon.com/gp/product/B07VRC5RJ8)                                                        |
+|       12 | M3 inserts                            | [Amazon link](https://www.amazon.com/gp/product/B01IYWTCWW)                                                        |
+|     Much | PLA for 3D printing most parts        | I used a mix of Hatchbox and Overture, but any should do                                                           |
+|     Some | ABS for 3D printing switch holders    | I used Hatchbox                                                                                                    |
 
 # Tools
 
@@ -111,11 +111,11 @@ You need:
 
 # 3D printed parts
 
-All the parts for 3D printing are in the `stl_mx`/`stl_choc` directories. They have been tested on an Ender 3 V2 and
-therefore the tolerances may not work for your printer. If that's the case, let me know by filing an issue in the
-project.
+All the parts for 3D printing are in the [`stl_mx`](stl_mx/)/[`stl_choc`](stl_choc/) directories. They have been tested
+on an Ender 3 V2 and therefore the tolerances may not work for your printer. If that's the case, let me know by filing
+an issue in the project.
 
-Below I discuss MX version, but everything is the same for the Choc versions in the `stl_choc` directory.
+Below I discuss MX version, but everything is the same for the Choc versions in the [`stl_choc`](stl_choc/) directory.
 
 You should be able to print everything in PLA, expect the switch holders for which I recommend ABS because you'll be
 soldering on them and the soldering iron can very easily melt PLA.
