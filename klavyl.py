@@ -1,9 +1,18 @@
-from klavgen import *
 from dataclasses import dataclass
 
+from klavgen import *
+
+# Only changes switch holes & holders to Choc, but keeps MX spacing between keys
+use_choc = False
+
 config = Config(
-    case_config=CaseConfig(side_fillet=4, palm_rests_top_fillet=3),
+    case_config=CaseConfig(
+        side_fillet=4,
+        palm_rests_top_fillet=3,
+        switch_type=SwitchType.CHOC if use_choc else SwitchType.MX,
+    ),
     mx_key_config=MXKeyConfig(case_tile_margin=7.5),
+    choc_key_config=ChocKeyConfig(case_tile_margin=7.6),
     controller_config=ControllerConfig(case_tile_margin=5),
     trrs_jack_config=TrrsJackConfig(case_tile_margin=5),
 )
