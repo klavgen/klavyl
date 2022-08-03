@@ -9,7 +9,7 @@
 is low height, and has a palm rest. That's a lot, so let's decompose:
 
 - **handwired**: you don't need to buy or make PCBs
-- **MX or Choc switches**: uses either MX or Choc switches (but with MX spacing)
+- **MX or Choc switches**: uses either MX or Choc switches (but with MX spacing). Choc is still highly experimental.
 - **hotswappable**: uses Kailh hotswap sockets
 - **split**: left and right hand halves are separate
 - **ortholinear**: keys form a line across rows, rather than staggered where each row is offset
@@ -42,7 +42,7 @@ If you want a different config, let me know by filing an issue.
 You can find STLs in:
 
 - [`/stl_mx`](stl_mx/) for MX switches
-- [`/stl_choc`](stl_choc/) for Choc switches
+- [`/stl_choc`](stl_choc/) for Choc switches (highly experimental)
 
 # More pictures of the MX version
 
