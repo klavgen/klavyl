@@ -243,7 +243,7 @@ File [`connector.stl`](stl_mx/connector.stl). Connects the bottom to the palm re
    - Right back (closest to the left pin and farthest from you): GND
 
 1. Solder TRRS jack resistors **ON ONE SIDE ONLY**. Solder two resistors, one between the 3/PD0 and VCC wires, and one
-   between the 2/PD1 and VCC wires. This was pretty challenging to do given the short wires and limited spae. Use
+   between the 2/PD1 and VCC wires. This was pretty challenging to do given the short wires and limited space. Use
    electrical tape to insulate the connections.
 
 1. Solder long wires to the controller itself with the other ends dangling. See the next step for which holes on the Pro
