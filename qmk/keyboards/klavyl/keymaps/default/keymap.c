@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRAVE,         KC_1,          KC_2,          KC_3,         KC_4,            KC_5,           KC_6,                                             KC_7,                  KC_8,          KC_9,            KC_0,             KC_MINUS,        KC_EQUAL,           KC_BSPACE,
     KC_TAB,           KC_Q,          KC_W,          KC_E,         KC_R,            KC_T,           KC_DOT,                                           KC_DOT,                KC_Y,          KC_U,            KC_I,             KC_O,            KC_P,               KC_BSLASH,
     LT(1,KC_ESCAPE),  LCTL_T(KC_A),  LALT_T(KC_S),  LGUI_T(KC_D), LSFT_T(KC_F),    LCAG_T(KC_G),   KC_DOT,                                           KC_LEFT_BRACKET,       LCAG_T(KC_H),  LSFT_T(KC_J),    LGUI_T(KC_K),     LALT_T(KC_L),    LCTL_T(KC_SCOLON),  LT(2,KC_QUOTE),
-    KC_LEFT_SHIFT,    KC_Z,          KC_X,          KC_C,         KC_V,            KC_B,           KC_DOT,                                           KC_RIGHT_BRACKET,      KC_N,          KC_M,            KC_COMMA_LBRACE,  KC_DOT_RBRACE,   KC_SLASH,           LSFT_T(KC_LANGLEBR_RANGLEBR),
+    KC_LEFT_SHIFT,    KC_Z,          KC_X,          KC_C,         KC_V,            KC_B,           KC_DOT,                                           KC_RIGHT_BRACKET,      KC_N,          KC_M,            KC_COMMA_LBRACE,  KC_DOT_RBRACE,   KC_SLASH,           KC_LANGLEBR_RANGLEBR,
                                                                   LT(2,KC_SPACE),  KC_ENTER,       KC_AUDIO_VOL_DOWN,                                KC_AUDIO_VOL_UP,       KC_ENTER,      LT(1,KC_SPACE)
   ),
 
