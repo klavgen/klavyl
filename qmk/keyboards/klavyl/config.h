@@ -5,7 +5,7 @@
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x1EE7
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Mekemaker
+#define MANUFACTURER    Klavgen
 #define PRODUCT         Klavyl
 
 // Rows are doubled-up

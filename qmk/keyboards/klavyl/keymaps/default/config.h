@@ -1,8 +1,10 @@
 #pragma once
 
-#define USE_SERIAL
+// #define USE_SERIAL
+#define USE_I2C
 
 #define MASTER_LEFT
+// #define MASTER_RIGHT
 
 #define IGNORE_MOD_TAP_INTERRUPT
 
