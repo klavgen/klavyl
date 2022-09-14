@@ -8,13 +8,14 @@ use_choc = False
 config = Config(
     case_config=CaseConfig(
         side_fillet=4,
-        palm_rests_top_fillet=3,
+        palm_rests_top_fillet=5,
         switch_type=SwitchType.CHOC if use_choc else SwitchType.MX,
     ),
     mx_key_config=MXKeyConfig(case_tile_margin=7.5),
     choc_key_config=ChocKeyConfig(case_tile_margin=7.6),
     controller_config=ControllerConfig(case_tile_margin=5),
     trrs_jack_config=TrrsJackConfig(case_tile_margin=5),
+    usbc_jack_config=USBCJackConfig(case_tile_margin=5),
 )
 
 key_x_gap = MX_KEY_X_SPACING - MX_KEYCAP_1U_WIDTH
@@ -81,10 +82,12 @@ keys.extend(
 
 screw_holes = [  # Clockwise
     ScrewHole(x=2.5, y=8.5, z=0),
-    ScrewHole(x=137, y=8.5, z=0),
-    ScrewHole(x=149, y=-38.4, z=0),
+    ScrewHole(x=94, y=8.5, z=0),
+    ScrewHole(x=172.5, y=8.5, z=0),
+    ScrewHole(x=172.5, y=-45.5, z=0),
     ScrewHole(x=141.5, y=-86, z=0),
     ScrewHole(x=143.5, y=-129.5, z=0),
+    ScrewHole(x=75, y=-73, z=0),
     ScrewHole(x=2.5, y=-87.7, z=0),
 ]
 
@@ -92,7 +95,9 @@ patches = [
     Patch(
         points=[
             (-3, 14),
-            (147, 14),
+            (178, 14),
+            (178, -51),
+            (147, -51),
             (147, -100),
             (90, -93.2),
             (-3, -93.2),
@@ -120,7 +125,7 @@ palm_rests = [
             (-3, -192),
         ],
         height=config.case_config.case_base_height + 8,
-        connector_locations_x=[20, 125],
+        connector_locations_x=[13, 60, 102.5, 134],
     ),
 ]
 
@@ -131,14 +136,14 @@ texts = [
 
 controller = Controller(x=154, y=14)
 
-trrs_jack = TrrsJack(x=171.9, y=-32, rotate=-90)
+usbc_jack = USBCJack(x=161, y=-51, rotate=-180)
 
 
 keyboard_result = render_and_save_keyboard(
     keys=keys,
     screw_holes=screw_holes,
     controller=controller,
-    trrs_jack=trrs_jack,
+    components=[usbc_jack],
     patches=patches,
     palm_rests=palm_rests,
     texts=texts,

@@ -30,7 +30,7 @@ The current files are meant for:
 
 - Kailh hotswap sockets (MX or Choc)
 - Pro Micro or similar boards of the same size
-- TRRS connection between the two halves
+- USB-C connection between the two halves
 - QMK for the firmware
 - Printing on a reasonably tuned 3D printer. I used an Ender 3 V2.
 - M3 screws with inserts that are melted into the board
@@ -52,19 +52,19 @@ Back photo, showing the low height of 11 mm and the cable connections:
 <img src="img/keyboard_back.jpg" alt="Klavyl keyboard" width="700"/>
 </p>
 
-Front of 3D model, showing the top with switch holes, the bottom and the palm rest:
+Front of 3D model, showing the top with switch holes, the bottom, the palm rest, and the USB-C jack holder:
 
 <p align="center">
 <img src="img/stl/front.png" alt="Front" width="700"/>
 </p>
 
-Back of 3D model, showing the cutouts for the Pro Micro and TRRS jack:
+Back of 3D model, showing the cutout for the Pro Micro:
 
 <p align="center">
 <img src="img/stl/back.png" alt="Back" width="700"/>
 </p>
 
-Front of 3D model, showing all the components (top, bottom, palm rest, switch holders, Pro Micro holder, TRRS jack
+Front of 3D model, showing all the components (top, bottom, palm rest, switch holders, Pro Micro holder, USB-C jack
 holder):
 
 <p align="center">
@@ -88,10 +88,10 @@ These are the parts you need. The Amazon links is what I used and they are non-a
 |       62 | MX keycaps                            | 48 1u keycaps and 14 1.25u keycaps                                                                                 |
 |       62 | Kailh hotswap sockets                 | [Amazon link](https://www.amazon.com/gp/product/B096WZ6TJ5) for MX; the Choc hotswap sockets I got from AliExpress |
 |       62 | 1N4148 diodes                         | [Amazon link](https://www.amazon.com/gp/product/B06XB1R2NK)                                                        |
-|        2 | PJ-320A 4-pole 3.5 mm TRRS connectors | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)                                                        |
+|        2 | Female USB-C socket                   | [Adafruit link](https://www.adafruit.com/product/5180)                                                             |
 |        2 | 4.7 kOhm resistors                    | [Amazon link](https://www.amazon.com/gp/product/B07HDFHPP3)                                                        |
 |        2 | Arduino Pro Micro microcontrollers    | [Amazon link](https://www.amazon.com/gp/product/B08BJNV1J3)                                                        |
-|        1 | TRRS cable                            | [Amazon link](https://www.amazon.com/gp/product/B07KY862P6)                                                        |
+|        1 | USB-C to USB-C cable                  | [Amazon link](https://www.amazon.com/gp/product/B0B5QJTT8M)                                                        |
 |        1 | Micro USB cable                       | Make sure it's not a power-only cable                                                                              |
 |  20 feet | 26 gauge or smaller solid core wire   | You can also use enameled or stranded wires, but it will be more painful                                           |
 |      ~20 | Rubber bumpers to stabilize the board | [Amazon link](https://www.amazon.com/gp/product/B08MDW52SC)                                                        |
@@ -107,7 +107,7 @@ You need:
 - Soldering iron and everything around it: solder, safety glasses, ventilation, etc.
 - Tweezers
 - Wire stripper, unless you are going to strip manually or will use bare wire for the rows/columns and only use
-  insulated wire for the Pro Micro and TRRS jacks
+  insulated wire for the Pro Micro and USB-C jacks
 
 # 3D printed parts
 
@@ -124,16 +124,16 @@ This is what you should print:
 
 | Quantity | File                    | Notes                                                                       |
 | -------: | ----------------------- | --------------------------------------------------------------------------- |
-|        1 | `keyboard top.stl`      | Print in normal orientation for the left hand                               |
-|        1 | `keyboard top.stl`      | Print **mirrored** for right hand                                           |
-|        1 | `keyboard bottom.stl`   | Print in normal orientation for the left hand                               |
-|        1 | `keyboard bottom.stl`   | Print **mirrored** for right hand                                           |
-|        1 | `palm rest.stl`         | Print in normal orientation for the left hand                               |
-|        1 | `palm rest.stl`         | Print **mirrored** for right hand                                           |
-|       62 | `switch holder.stl`     | Print file as is, without supports, with the flat side facing down. Use ABS |
+|        1 | `keyboard_top.stl`      | Print in normal orientation for the left hand                               |
+|        1 | `keyboard_top.stl`      | Print **mirrored** for right hand                                           |
+|        1 | `keyboard_bottom.stl`   | Print in normal orientation for the left hand                               |
+|        1 | `keyboard_bottom.stl`   | Print **mirrored** for right hand                                           |
+|        1 | `palm_rest.stl`         | Print in normal orientation for the left hand                               |
+|        1 | `palm_rest.stl`         | Print **mirrored** for right hand                                           |
+|       62 | `switch_holder.stl`     | Print file as is, without supports, with the flat side facing down. Use ABS |
 |        4 | `connector.stl`         | Print file as is, without supports                                          |
-|        2 | `controller holder.stl` | Ensure your Pro Micros actually fit                                         |
-|        2 | `trrs jack holder.stl`  | Ensure your TRRS jacks actually fit                                         |
+|        2 | `controller_holder.stl` | Ensure your Pro Micros actually fit                                         |
+|        2 | `usbc_jack_holder.stl`  | Ensure your USB-C jacks actually fit                                        |
 
 ## Keyboard bottom
 
@@ -181,12 +181,12 @@ File [`controller_holder.stl`](stl_mx/controller_holder.stl). Holds the Arduino 
 <img src="img/stl/components/controller_holder.png" alt="Pro Micro holder" width="300"/>
 </p>
 
-## TRRS jack holder
+## USB-C jack holder
 
-File [`trrs_jack_holder.stl`](stl_mx/trrs_jack_holder.stl). Holds the TRRS jack.
+File [`usbc_jack_holder.stl`](stl_mx/usbc_jack_holder.stl). Holds the USB-C socket.
 
 <p align="center">
-<img src="img/stl/components/trrs_jack_holder.png" alt="TRRS jack holder" width="250"/>
+<img src="img/stl/components/usbc_jack_holder.png" alt="USBC jack holder" width="250"/>
 </p>
 
 ## Connector
@@ -233,16 +233,15 @@ File [`connector.stl`](stl_mx/connector.stl). Connects the bottom to the palm re
 
 **Note**: the 3 keys on the thumb fan need to be wired to columns 5, 6, and 7 (see the picture).
 
-6. Wire the TRRS jack to the Pro Micro. Klavyl uses the same wiring as
-   [the Redox keyboard](https://github.com/mattdibi/redox-keyboard/blob/master/redox/pcb/Redox-schematic.pdf). If you
-   orient the TRRS jack with the pins on top, and the jack front hole pointing to you, this is the scheme:
+6. Wire the USB-C jack to the Pro Micro. The actual wiring doesn't matter as long as it's consistent on both halves. I
+   use the following:
 
-   - Left pin (should be the only one): VCC
-   - Right front pin (close to you and the jack front hole): 3/PD0
-   - Right middle pin: 2/PD1
-   - Right back (closest to the left pin and farthest from you): GND
+   - VCC pad to VCC
+   - D+ pad to 3/PD0
+   - D- pad to 2/PD1
+   - G pad to GND
 
-1. Solder TRRS jack resistors **ON ONE SIDE ONLY**. Solder two resistors, one between the 3/PD0 and VCC wires, and one
+1. Solder USB-C jack resistors **ON ONE SIDE ONLY**. Solder two resistors, one between the 3/PD0 and VCC wires, and one
    between the 2/PD1 and VCC wires. This was pretty challenging to do given the short wires and limited space. Use
    electrical tape to insulate the connections.
 
@@ -269,6 +268,8 @@ File [`connector.stl`](stl_mx/connector.stl). Connects the bottom to the palm re
    - Row 3: 7/PE6
    - Row 4: 8/PB4
    - Row 5: 9/PB5
+
+This is an older picture from when Klavyl still used TRRS jacks, but you get the idea:
 
 <p align="center">
 <img src="img/building/5_solder_pro_micro_and_trrs_jack.jpg" alt="Solder Pro Micro and TRRS jack" width="700"/>
